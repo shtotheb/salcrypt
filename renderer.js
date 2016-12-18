@@ -125,22 +125,6 @@ app.controller('personCtrl', function($scope)
     $scope.cypherText = tempCypher;
   }
 
-  $scope.permutationDecypher = function() {
-  order = [5,1,3,2,4,0];
-  tempCypher = "";
-  tempPlain = $scope.plainText;
-  stringLength = tempPlain.length;
-
-    for (var i=0; i<stringLength; i+=6){
-      for (var j=0; j<6; j++){
-        tempCypher += tempPlain.charAt(order[j]+i)
-      }
-
-    }
-
-    $scope.cypherText = tempCypher;
-  }
-
   var charTemp;
 
   $scope.expansionCypher = function() {
